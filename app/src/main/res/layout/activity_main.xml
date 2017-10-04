@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vedaant.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score:  "/>
+
+    <TextView
+        android:id="@+id/player_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/score_label"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/comp_score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/player_score"
+        android:layout_marginLeft="5dp"
+        android:text="Computer Score:  "/>
+
+    <TextView
+        android:id="@+id/comp_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/comp_score_label"
+        android:text="0"/>
+
+    <ImageView
+        android:id="@+id/img_dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comp_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/dice1"
+        />
+
+    <Button
+        android:onClick="roll"
+        android:id="@+id/btn_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_dice"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="25dp"
+        android:text="Roll"/>
+    <Button
+        android:id="@+id/btn_hold"
+        android:onClick="hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_dice"
+        android:layout_toRightOf="@id/btn_roll"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Hold"/>
+    <Button
+        android:id="@+id/btn_reset"
+        android:onClick="reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_dice"
+        android:layout_toRightOf="@id/btn_hold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:text="Reset"/>
+
+    <TextView
+        android:id="@+id/running_score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_hold"
+        android:layout_marginTop="5dp"
+        android:text="Current Score:  "/>
+
+    <TextView
+        android:id="@+id/running_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/running_score_label"
+        android:layout_alignBottom="@+id/running_score_label"
+        android:layout_toRightOf="@+id/running_score_label"
+        android:layout_toEndOf="@+id/running_score_label" />
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/running_score_label"
+        android:layout_marginTop="50dp"
+        android:text="Hello"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
